@@ -5,7 +5,7 @@ function suma1(numero, res_anterior) {
     }, 500);
     return 0;
 }
-var resultado2;
+var resultado2 = 0;
 resultado2 = suma1(2, resultado2);
 console.log(resultado2); // muestra 0 porque es asincrona con retraso
 console.log('*******************************');

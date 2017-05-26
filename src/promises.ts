@@ -1,4 +1,4 @@
-function suma1(numero, res_anterior){
+function suma1(numero:number, res_anterior:number){
    setTimeout(function(){
       var suma = numero + res_anterior;
       return suma;
@@ -6,7 +6,7 @@ function suma1(numero, res_anterior){
    return 0;
 }
 
-var resultado2:number;
+var resultado2:number = 0;
 resultado2 = suma1(2, resultado2);
 
 console.log(resultado2); // muestra 0 porque es asincrona con retraso
@@ -14,8 +14,8 @@ console.log('*******************************');
 
 // ahora de modo asincrono con Promises
 
-function suma2 (numero, res_temporal){
-    const promesa = new Promise(function (solucion, fallo) {
+function suma2 (numero:number, res_temporal:number){
+    const promesa = new Promise(function (solucion:any, fallo:any) {
         setTimeout(function(){
             res_temporal = numero + res_temporal;
             solucion(res_temporal);
@@ -27,11 +27,11 @@ function suma2 (numero, res_temporal){
     return promesa
 }
 
-var mostrar_resultado_noformat = function(p){
+var mostrar_resultado_noformat = function(p:any){
    console.log(p);
    return p
 }
-var resultado_formateado = function(pp){
+var resultado_formateado = function(pp:any){
     console.log('el resultado es: '+pp)
 }
 

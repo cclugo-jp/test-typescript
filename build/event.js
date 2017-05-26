@@ -16,14 +16,15 @@ eventEmitter.on('data_received', function () {
     console.log('resultado: ' + resultado1);
 });
 // Fire the connection event 
-function suma1(numero_uno, numero_dos, eventEmitter) {
+function suma1_event(numero_uno, numero_dos, eventEmitter) {
     setTimeout(function () {
-        resultado1 = numero_uno + numero_dos;
+        var resultado1 = numero_uno + numero_dos;
+        var eventEmitter;
         eventEmitter.emit('connection');
     }, 500);
 }
 console.log("programa asincrono ok");
 var resultado1 = 'resultado: sin definir';
-suma1(2, 5, eventEmitter);
+suma1_event(2, 5, eventEmitter);
 console.log(resultado1);
 //# sourceMappingURL=event.js.map
